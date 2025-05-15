@@ -12,7 +12,7 @@ export default function ConnectionStatus() {
         <div className={`w-3 h-3 rounded-full mr-2 ${isConnected ? 'bg-white' : 'bg-red-300'} animate-pulse`} />
         <span className="text-white text-sm font-semibold">
           {isConnected ? 'Connected' : 'Disconnected'}
-          {isConnected && latency && ` (${latency}ms)`}
+          {isConnected && latency && ` (${latency})`}
         </span>
       </div>
       

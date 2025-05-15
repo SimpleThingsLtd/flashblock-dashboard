@@ -44,7 +44,7 @@ export default function DashboardStats() {
         
         <StatsCard 
           title="Latency" 
-          value={latency ? `${latency}ms` : "N/A"}
+          value={latency ? `${latency}` : "N/A"}
           icon={<FiClock />}
           className="border-l-4 border-blue-500"
         />
