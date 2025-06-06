@@ -26,7 +26,7 @@ import {
 // Maximum number of events to keep
 const MAX_EVENTS = 100;
 // WebSocket URL
-const WS_URL = 'wss://dev-feed.flayerlabs.xyz/ws';
+const WS_URL = 'wss://base-sepolia-feed.flaunch.gg';
 // Timeouts & reconnection
 const CONNECTION_TIMEOUT = 5000;
 const MAX_RECONNECT_ATTEMPTS = 5;
