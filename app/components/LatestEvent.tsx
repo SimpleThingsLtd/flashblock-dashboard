@@ -132,7 +132,7 @@ export default function LatestEvent() {
   };
   
   return (
-    <div className={`fixed bottom-4 right-4 z-50 ${getEventColor()} text-white px-4 py-2 rounded-lg shadow-lg ${isNew ? 'animate-pulse' : ''}`}>
+    <div className={`fixed top-1 right-2 z-50 ${getEventColor()} text-white px-3 py-1 text-xs rounded-lg shadow-lg ${isNew ? 'animate-pulse' : ''}`}>
       <div className="flex items-center">
         <div className="w-2 h-2 bg-white rounded-full mr-2"></div>
         <span>{renderEventContent()}</span>

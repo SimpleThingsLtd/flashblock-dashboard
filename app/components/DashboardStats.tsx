@@ -5,6 +5,7 @@ import { useWebSocket } from '@/app/contexts/WebSocketContext';
 import StatsCard from './StatsCard';
 import EventRateGauge from './EventRateGauge';
 import { FiActivity, FiClock, FiDatabase, FiDollarSign, FiPieChart, FiCheckCircle } from 'react-icons/fi';
+import { GiBrickWall } from "react-icons/gi";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, ResponsiveContainer } from 'recharts';
 
 interface EventRateDataPoint {
@@ -131,6 +132,13 @@ export default function DashboardStats() {
             title="Transaction Receipts" 
             value={stats.eventCounts.TX_RECEIPT}
             icon={<FiCheckCircle />}
+            className="border-l-4 border-blue-500"
+          />
+
+          <StatsCard 
+            title="Bidwall Updates" 
+            value={stats.eventCounts.BIDWALL_UPDATE}
+            icon={<GiBrickWall />}
             className="border-l-4 border-blue-500"
           />
         </div>

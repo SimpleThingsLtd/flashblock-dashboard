@@ -10,11 +10,14 @@ import MarketCapList from '@/app/components/MarketCapList';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white text-gray-800">
-      <ConnectionStatus />
-      <LatestEvent />
+    <>
+    <ConnectionStatus />
+    <LatestEvent />
+    <div className="min-h-screen z-10 bg-white text-gray-800">
+      
+    
 
-      <header className="py-6 px-4 md:px-8 bg-gray-100 mb-6">
+      <header className="py-8 px-4 md:px-8 bg-gray-100 mb-6">
         <div className="container mx-auto">
           <h1 className="text-3xl font-bold text-gray-800">Flaunch Feed Dashboard</h1>
           <p className="text-gray-600 mt-2">Real-time visualization of Flaunch Feed events</p>
@@ -50,5 +53,6 @@ export default function Home() {
         </div>
       </footer>
     </div>
+    </>
   );
 }

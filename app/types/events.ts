@@ -18,8 +18,9 @@ export interface BaseEvent {
     | 'USER_FEE_CLAIMED' 
     | 'FAIR_LAUNCH_ENDED' 
     | 'SCHEDULED'
-    | 'MCAP_UPDATE';
-  
+    | 'MCAP_UPDATE'
+    | 'TX_RECEIPT'
+    | 'BIDWALL_UPDATE'; 
   // Pool Created Event
   export interface PoolCreatedData {
     symbol: string;
@@ -155,6 +156,7 @@ export interface BaseEvent {
       SCHEDULED: number;
       MCAP_UPDATE: number;
       TX_RECEIPT: number;
+      BIDWALL_UPDATE: number;
     };
     eventRate: number;
     lastEventTime?: number;

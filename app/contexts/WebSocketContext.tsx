@@ -58,6 +58,7 @@ const initialState: State = {
     SCHEDULED: 0,
     MCAP_UPDATE: 0,
     TX_RECEIPT: 0,
+    BIDWALL_UPDATE: 0,
   },
   eventRate: 0,
   recentTransactions: new Set<string>(),
@@ -258,7 +259,7 @@ function useWebSocketEvents(socket: CustomWebSocket | null) {
         const hasOffset = /Z|[+-]\d{2}:\d{2}$/.test(ts);
         return hasOffset ? ts : `${ts}Z`;
       };
-      if (data.type && ['POOL_CREATED', 'POOL_SWAP', 'USER_FEE_CLAIMED', 'FAIR_LAUNCH_ENDED', 'SCHEDULED'].includes(data.type)) {
+      if (data.type && ['POOL_CREATED', 'POOL_SWAP', 'USER_FEE_CLAIMED', 'FAIR_LAUNCH_ENDED', 'SCHEDULED', 'BIDWALL_UPDATE'].includes(data.type)) {
         dispatch({ type: 'ADD_ACTIVITY', payload: { ...data, timestamp: normalizeTs(data.timestamp) } });
       } else if (data.type === 'MCAP_UPDATE') {
         dispatch({ type: 'ADD_MCAP', payload: { ...data, timestamp: normalizeTs(data.timestamp) } });

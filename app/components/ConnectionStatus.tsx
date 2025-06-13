@@ -7,10 +7,10 @@ export default function ConnectionStatus() {
   const { isConnected, connectionError, latency } = useWebSocket();
 
   return (
-    <div className="fixed top-4 right-4 z-50">
-      <div className={`rounded-full px-4 py-2 flex items-center shadow-md ${isConnected ? 'bg-green-600' : 'bg-red-600'}`}>
-        <div className={`w-3 h-3 rounded-full mr-2 ${isConnected ? 'bg-white' : 'bg-red-300'} animate-pulse`} />
-        <span className="text-white text-sm font-semibold">
+    <div className="fixed top-1 left-1 -z-1">
+      <div className={`rounded-full px-3 opacity-50 py-1 flex items-center shadow-md ${isConnected ? 'bg-green-600' : 'bg-red-600'}`}>
+        <div className={`w-2 h-2 rounded-full mr-2 ${isConnected ? 'bg-white' : 'bg-red-300'} animate-pulse`} />
+        <span className="text-white text-xs font-semibold">
           {isConnected ? 'Connected' : 'Disconnected'}
           {isConnected && latency && ` (${latency})`}
         </span>
